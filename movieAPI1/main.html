@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tech2Edge</title>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> --> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     
+    </head>
+<body>
+    <div class="container header">
+        <img src="img/logo.png" class="logo">
+        <a href="#" class="navbtn">Menu</a>
+    </div>
+  <!--
+
+    <div class="container">
+        <img src="" id="rainbow" style="width:100%; height:100%; margin-top:10%;">
+        <script>
+            catchRainbow()
+            .then(response => {
+                console.log('success');
+            })
+            .catch(error=>{
+                console.error(error);
+            });
+            async function catchRainbow(){
+                const response = await fetch("img/cover2.jpg");
+                console.log("this is resonse");
+                console.log(response);
+                const blob = await response.blob();  
+                console.log("this is blob");
+                console.log(blob);
+                document.getElementById('rainbow').src =URL.createObjectURL(blob)
+            }
+               
+        </script>
+      
+  -->    <div class="container"> 
+            <div id="cover" class="row"></div>
+            <div id="desc" class="row"></div>
+            <script src="js/scriptDesc.js"></script> 
+        </div>
+    </div>
+    <div class="container">
+        <h1 style="color:white;  margin-left:5%; ">Cast</h1> 
+        <div id="cast" class="row"></div>
+        <script src="js/script.js"></script> 
+    </div>
+    <div class="container">
+        
+    <div class="stars">
+        <h1 style="color:white; margin-left:5%;" >Ratings</h1> 
+        <form action="">
+          <input class="star star-5" id="star-5" type="radio" name="star"/>
+          <label class="star star-5" for="star-5"></label>
+
+          <input class="star star-4" id="star-4" type="radio" name="star"/>
+          <label class="star star-4" for="star-4"></label>
+          
+          <input class="star star-3" id="star-3" type="radio" name="star"/>
+          <label class="star star-3" for="star-3"></label>
+          
+          <input class="star star-2" id="star-2" type="radio" name="star"/>
+          <label class="star star-2" for="star-2"></label>
+          <input class="star star-1" id="star-1" type="radio" name="star"/>
+          <label class="star star-1" for="star-1"></label>
+        </form>
+
+      </div> 
+    </div>
+    <div class="container">
+      
+        <form id="movieForm" autocomplete="off">
+            <div class="form-group">
+                <input class="form-control" type="text" id="movie" placeholder="Review..">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-danger btn-block" onclick="funct()"style="background-color:rgb(148, 35, 133);width: 15%;">Post</button>    
+                <script>
+                    function funct() {
+                      alert("Thanks for the review");
+                    }
+                    </script>
+            </div>   
+        </form>
+        <div id="result"></div>
+    </div>
+</body>
+    </html>
